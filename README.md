@@ -53,8 +53,8 @@ cbuild RTX5_Blinky.csolution.yml
 ### Run
 
 - Connect the board's Micro-USB to the PC (provides also power).
-- Open the 'CMSIS' view from the side bar and press the 'Run' button and wait until the image is programmed and starts
-  running.
+- Open the 'CMSIS' view from the side bar and press the **Run** button and wait until the image is programmed and
+  starts running.
 
 ### Debug
 
