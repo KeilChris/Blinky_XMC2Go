@@ -1,8 +1,9 @@
 # Blinky Project for XMC2Go
 
-The **Blinky** project can be easily used to verify the basic tool setup:
+This project can be used to verify the basic tool setup and hardware connection to the
+[Infineon XMC2Go](https://www.keil.arm.com/boards/infineon-xmc-2go-v1-d3962c0/) development board.
 
-- `LED0` and `LED1` blink intermittently in 1 sec interval.
+The application blinks `LED0` and `LED1` intermittently in a 1 second interval.
 
 Refer to [Project Configuration](#project-configuration) for board specific settings.
 
@@ -34,7 +35,7 @@ Open the **CMSIS view** from the side bar and press the **Build** button.
 
 ### Using command line interface (CLI)
 
-Download required packs (not required when the packs are already available) by executing the following commands:
+Download required packs (not required if the packs are already available) by executing the following commands:
 
 ```sh
 csolution list packs -s RTX5_Blinky.csolution.yml -m > packs.txt
@@ -58,7 +59,9 @@ cbuild RTX5_Blinky.csolution.yml
 
 ### Debug
 
-Open the **CMSIS** view from the side bar and press the **Debug** button.
+Open the **CMSIS** view from the side bar and press the **Debug** button. A connection is established via the on-board
+[J-Link Lite](https://www.segger.com/products/debug-probes/j-link/models/j-link-lite/j-link-lite-cortex-m/) debug
+adapter.
 
 RTOS awareness is available through the **XRTOS** view in the bottom panel.
 
