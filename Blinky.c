@@ -45,15 +45,19 @@ __NO_RETURN static void thrLED (void *arg) {
   for (;;) {
     LED_On(0);
     g_ledSet = 1;
+    printf("LED0 On, LED1 Off\r\n");
     osDelay(500);
     LED_On(1);
     g_ledSet = 3;
+    printf("LED0 On, LED1 On\r\n");
     osDelay(500);
     LED_Off(0);
     g_ledSet = 2;
+    printf("LED0 Off, LED1 On\r\n");
     osDelay(500);
     LED_Off(1);
     g_ledSet = 0;
+    printf("LED0 Off, LED1 Off\r\n");
     osDelay(500);
   }
 }

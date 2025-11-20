@@ -65,6 +65,27 @@ adapter.
 
 RTOS awareness is available through the **XRTOS** view in the bottom panel.
 
+### printf output
+
+`printf` output is redirected to the **DEBUG CONSOLE** in VS Code. For that, you need a custom `launch.json` file which
+is added to the project.
+
+If you want to do this in other projects, add the following to the `JLink (launch)` task:
+
+- In the `initCommands` section, add:
+
+```json
+                "monitor semihosting enable",
+                "monitor semihosting IOClient 2",
+```
+
+- In the `"serverParameters"` section, add:
+
+```json
+                    "-semihosting",
+                    "-silent",
+```
+
 ## Project Configuration
 
 ### Keil RTX5 real-time operating system
