@@ -1,0 +1,25 @@
+solution:
+  description: RTX5 Blinky Example for XMC2Go Board
+  created-for: CMSIS-Toolbox@2.12.0
+  compiler: AC6
+
+  # Project define
+  define:
+    - OS_IDLE_THREAD_NAME: \"Idle\"
+    - OS_TIMER_THREAD_NAME: \"Timer\"
+
+  target-types:
+    - type: XMC_2Go
+      device: XMC1100-Q024x0064
+      optimize: debug
+      target-set:
+        - set:
+          images:
+            - project-context: RTX5_Blinky
+          debugger:
+            name: J-Link Server
+            port: 3333
+            protocol: swd
+            clock: 4000000
+  projects:
+    - project: RTX5_Blinky.cproject.yml
