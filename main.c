@@ -49,6 +49,7 @@
  */
 
 #include "main.h"
+#include "Board_LED.h"
 #include "cmsis_os2.h"
 // osThreadAttr_t blinkLED_attr = {
 //   .name = "blinkLEDThread"

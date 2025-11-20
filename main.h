@@ -22,13 +22,6 @@
 #include <stdint.h>
 
 /* Prototypes */
-extern int32_t  LED_Initialize   (void);
-extern int32_t  LED_Uninitialize (void);
-extern int32_t  LED_On           (uint32_t num);
-extern int32_t  LED_Off          (uint32_t num);
-extern int32_t  LED_SetOut       (uint32_t val);
-extern uint32_t LED_GetCount     (void);
-
 extern int app_main     (void);
 
 #endif
