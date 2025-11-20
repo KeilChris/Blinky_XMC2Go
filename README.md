@@ -70,9 +70,9 @@ RTOS awareness is available through the **XRTOS** view in the bottom panel.
 `printf` output is redirected to the **DEBUG CONSOLE** in VS Code. For that, you need a custom `launch.json` file which
 is added to the project.
 
-If you want to do this in other projects, add the following to the `JLink (launch)` task:
+If you want to do this in other projects, add the following to the `"JLink (launch)"` task:
 
-- In the `initCommands` section, add:
+- In the `"initCommands"` section, add:
 
 ```json
                 "monitor semihosting enable",
