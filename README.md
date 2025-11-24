@@ -110,7 +110,7 @@ If you want to do this in other projects, add the following to the `"JLink (laun
 The [possible values for IOClient](https://kb.segger.com/J-Link_GDB_Server#semihosting_IOClient) are as follows:
 
 - `1` = Telnet client (GDB Server handles it internally)
-- `2` = GDB client (should redirect to VS Code Debug Console)
+- `2` = GDB client (redirects to VS Code **DEBUG CONSOLE**)
 - `3` = Both
 
 If you are using Telnet, you can observe the output with the **SERIAL MONITOR**. Set the following:
