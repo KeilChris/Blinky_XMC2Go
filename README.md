@@ -72,6 +72,13 @@ is added to the project.
 
 If you want to do this in other projects, add the following to the `"JLink (launch)"` task:
 
+- In the `"serverParameters"` section, add:
+
+```json
+                    "-semihosting",
+                    "-silent",
+```
+
 - In the `"initCommands"` section, add:
 
 ```json
@@ -79,12 +86,19 @@ If you want to do this in other projects, add the following to the `"JLink (laun
                 "monitor semihosting IOClient 2",
 ```
 
-- In the `"serverParameters"` section, add:
+The [possible values for IOClient](https://kb.segger.com/J-Link_GDB_Server#semihosting_IOClient) are as follows:
 
-```json
-                    "-semihosting",
-                    "-silent",
-```
+- `1` = Telnet client (GDB Server handles it internally)
+- `2` = GDB client (should redirect to VS Code Debug Console)
+- `3` = Both
+
+If you are using Telnet, you can observe the output with the **SERIAL MONITOR**. Set the following:
+
+- Monitor Mode: TCP
+- View Mode: Text
+- Host: `localhost`
+- Port: `2333`
+- Line ending: CR
 
 ## Project Configuration
 
